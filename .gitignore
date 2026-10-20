@@ -1,0 +1,113 @@
+# Python
+backend/.venv/
+frontend/.venv/
+__pycache__/
+*.py[cod]
+
+# Frontend build and dependencies
+frontend/node_modules/
+frontend/dist/
+
+# Local secrets/configuration
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Recorded interview audio (user data)
+backend/storage/
+
+# ---------------------------------------------------------------------------
+# Additional private / generated files (added in a security review)
+# ---------------------------------------------------------------------------
+
+# More environment variants (dotenv, direnv, framework-specific)
+.envrc
+*.env
+!*.env.example
+!.env.example
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Keys, certificates and credential files
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+*.cer
+*.csr
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.ppk
+credentials.json
+client_secret*.json
+service-account*.json
+*-service-account.json
+*serviceaccount*.json
+gcp-key*.json
+secrets.json
+secrets.yaml
+secrets.yml
+secrets.toml
+*.secret
+*.secrets
+secrets/
+.secrets/
+.aws/
+.ssh/
+.npmrc
+.pypirc
+.netrc
+.htpasswd
+
+# Local databases and dumps (may hold user data and password hashes)
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.dump
+*.bak
+mongodb-data/
+data/db/
+
+# Browser-test artefacts (can contain saved sessions, cookies and tokens)
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
+frontend/playwright/.auth/
+playwright/.auth/
+storageState*.json
+.auth/
+
+# Logs and coverage (can leak tokens and personal data)
+*.log
+logs/
+coverage/
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor / OS / tool-local settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.claude/settings.local.json
+.claude/*.local.*
+
+# Misc build output and caches
+*.tsbuildinfo
+frontend/.vite/
+frontend/.cache/

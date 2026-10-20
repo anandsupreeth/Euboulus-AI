@@ -1,0 +1,7 @@
+Login/sign up functionality
+
+#Passwordhash: user signs up and password is sent from the React frontend to the FastAPI backend. FastAPI uses Argon2id, a secure password-hashing algorithm, to generate a password hash, which is then stored in MongoDB instead of original password.
+
+JWT: User enters email and password → React sends credentials to FastAPI → FastAPI verifies entered password against the hash stored in MongoDB → JWT is generated and signed → Token is returned to the frontend → Frontend sends the JWT with requests to protected APIs → FastAPI verifies the token to identify the user and check whether they are authorized to access the requested data.
+
+Refesh tokens: Refresh tokens keep users signed in by securely renewing their session when it expires, so they don’t need to log in again each time. After signup or login, FastAPI generates a refresh token, stores its hash in MongoDB, and sends the token to the browser through an HttpOnly cookie. When the access JWT expires, the frontend uses this cookie to request a new access JWT.
